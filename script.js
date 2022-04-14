@@ -1,28 +1,10 @@
-// var javascript = {
-//     name:'javaScript',
-//     libraries: ['React', 'Angular', 'Vue'],
-//     printlibraries: function() {
-//         this.libraries.forEach((a) =>  console.log(`${this.name}loves ${a}`));
-//     },
-// };
+var myVar = "";
 
-// javascript.printlibraries();
+//False, 0, "", null, undefined, Nan- Falsy
 
-const searchInput = document.querySelector(".search");
-const display = document.querySelector(".result");
-const thanks = document.querySelector(".thanks");
 
-function show() {
-    display.innerHTML = this.value;
-    var self = this;
-    setTimeout(function ()  {
-        thanks.innerHTML = `You have typed: ${self.value}`;
-    }, 1000);
+if(myVar) {
+    console.log("I am truthy");
+} else {
+    console.log("I am falsy");
 }
-
-
-// searchInput.addEventListener("keyup", () => {
-//     display.innerHTML = this.value;
-// });
-
-searchInput.addEventListener("keyup", show);
