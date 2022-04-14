@@ -1,27 +1,33 @@
-//array concat()
-var numbers1 = [1, 2, 3, 4, 5];
-var numbers2 = [6, 7, 8, 9, 10];
-var numbers3 = [11, 12, 13, 14, 15];
+//for loop
 
-var result = numbers2.concat(numbers3)
+// let i = 1;
+// for (; i <= 6; i++) {
+//     console.log(i);
+// }
+let i = 1;
+for (; ; i++) {
+    if(i <=5) {
+        console.log("for-loop: " + i);
+    }else {
+        break;
+    }
+}
 
-//array push()-push as a element of a array, you will see in result
-numbers1.push([6,7]) 
+//for in 
+const myObj = {
+    name: 'JavaScript',
+    estd: '1995',
+    founder: 'Brenden Eich'
+};
 
-//array map()-work like for loop
-var result2 = numbers2.map((num) => {
-    return 2* num;
-});
-
-
-//array resuce()- reduced a array into a single value
-var sum = numbers3.reduce((prevValue, currentValue, currentIndex, arr) => {
-    return prevValue+currentValue;
-});
+for(property in myObj) {
+    console.log("for-in: " + property)
+}
 
 
-console.log("concat:" + result)
-console.log("push:" + numbers1)
-console.log("map:" + result2)
-console.log("reduce:" + sum)
+//for-of
+const myArray = [1, 2, 3, 4, 5];
 
+for(element of myArray) {
+    console.log("for-of: " + element)
+}
