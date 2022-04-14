@@ -1,14 +1,28 @@
-// var age = 18;
+// var numbers = [1, 2, 3, 4, 12,14];
 
-// //it's complex, so used for 1 or 2level if-else
-// var type = age >= 18 ? "adult" : age<10 ? "Child" : "Young";
-// console.log(type);
+// var result = numbers.find(function(currentValue, currentIndex, arr) {
+//     return currentValue > 4;
+// });
 
-// var a = 5;
-// var access = a>5 ? true : false;
-// console.log(access); 
-//same as below code
+// console.log(numbers);
+// console.log(result);
 
-var a = 5;
-var access = a>5 ;
-console.log(access);
+class Student {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    test() {
+        console.log("hello");
+    }
+    exampleFunction() {
+        let array = [1,2,3];
+        array.find(() => {
+            this.test();
+        });
+    }
+}
+
+let student = new Student("nahid", 25);
+
+student.exampleFunction();
