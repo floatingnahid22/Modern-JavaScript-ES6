@@ -1,33 +1,45 @@
-//for loop
 
-// let i = 1;
-// for (; i <= 6; i++) {
-//     console.log(i);
-// }
-let i = 1;
-for (; ; i++) {
-    if(i <=5) {
-        console.log("for-loop: " + i);
-    }else {
-        break;
-    }
-}
 
-//for in 
-const myObj = {
+//object tricks
+
+var myObj = {
     name: 'JavaScript',
     estd: '1995',
-    founder: 'Brenden Eich'
+    founder: 'Brenden Eich',
+    ranking: 1
 };
 
-for(property in myObj) {
-    console.log("for-in: " + property)
+var keys = Object.keys(myObj);
+var values = Object.values(myObj);
+var entries = Object.entries(myObj);
+
+console.log(keys);
+console.log(values);
+console.log(entries);
+
+
+var x = 4;
+var y = 5;
+
+var z = x*y;
+
+var myObj2 = {
+    name: 'JavaScript',
+    estd: '1995',
+    founder: 'Brenden Eich',
+    ranking: 1,
+    x,
+    y,
+    z
+};
+
+var entries = Object.entries(myObj2);
+
+console.log(entries);
+
+//function default parameter
+function myFunc(x=10) {
+    return x;
 }
+console.log(myFunc(null));
 
-
-//for-of
-const myArray = [1, 2, 3, 4, 5];
-
-for(element of myArray) {
-    console.log("for-of: " + element)
-}
