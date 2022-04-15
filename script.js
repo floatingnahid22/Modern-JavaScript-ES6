@@ -1,15 +1,20 @@
-//import * as test from './external.js'; 
-//import {a, pi} from './external.js';
+//template literals
+var a = 5;
+var b = 6;
 
-//name import 
-import {a as varA, pi as varpi} from './external.js';
-console.log(varA, varpi);
+console.log(`I am ${a+b} and I am ${a-b}`);
 
+//tagged template literals
+function modifier(strings, ...values) {
+    // console.log(strings);
+    // console.log(values);
+    const m = strings.reduce((prev, current) => {
+        return prev + current +(values.length ? "Mr. " + values.shift(): "")
+    }, "");
+    return m;
+}
 
-//default import 
-import external, {pi2, myFunc} from './external.js';//function import/export 
-console.log(external, pi2);
+var player1 = 'sakib';
+var player2 = 'tamim';
 
-myFunc();
-
-
+console.log(modifier`We have ${player1} and ${player2} in Bangladesh Cricket Team.`);
