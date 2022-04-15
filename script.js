@@ -1,45 +1,27 @@
+ //array spreading
+ 
+ var numbers = [1,2,3,4,5];
 
+ var a = [...numbers];//exact copy of numbers
 
-//object tricks
+ var newNumbers = [...numbers,6];
+ numbers.push(7)
 
-var myObj = {
-    name: 'JavaScript',
-    estd: '1995',
-    founder: 'Brenden Eich',
-    ranking: 1
-};
+ console.log(newNumbers);
+ console.log(numbers);
 
-var keys = Object.keys(myObj);
-var values = Object.values(myObj);
-var entries = Object.entries(myObj);
+ //object spreading 
 
-console.log(keys);
-console.log(values);
-console.log(entries);
+ var myObj1 = {
+     x:1,
+     y:2
+ }
+ var myObj2 = {
+     a:1,
+     b:2
+ }
 
-
-var x = 4;
-var y = 5;
-
-var z = x*y;
-
-var myObj2 = {
-    name: 'JavaScript',
-    estd: '1995',
-    founder: 'Brenden Eich',
-    ranking: 1,
-    x,
-    y,
-    z
-};
-
-var entries = Object.entries(myObj2);
-
-console.log(entries);
-
-//function default parameter
-function myFunc(x=10) {
-    return x;
-}
-console.log(myFunc(null));
-
+ console.log({
+    ...myObj1,
+    ...myObj2
+ });
